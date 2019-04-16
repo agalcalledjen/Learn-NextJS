@@ -11,21 +11,43 @@ const Home = ({ shows }) => {
     <Layout>
       <div class='container my-12 mx-auto px-4 md:px-12'>
         <div class='flex flex-wrap -mx-1 lg:-mx-4'>
-          {/* <ul> */}
           {shows.map(show => (
-            <div
+            <Link
+              as={`/p/${show.id}`}
+              href={`/post?id=${show.id}`}
               key={show.id}
-              class='w-full sm:w-1/2 md:w-1/3 mb-4 bg-grey px-2'
             >
-              <Link as={`/p/${show.id}`} href={`/post?id=${show.id}`}>
-                <>
-                  <a>{show.name}</a>
-                  <p>{(show.summary = show.summary.replace(regex, ''))}</p>
-                </>
-              </Link>
-            </div>
+              <div class='my-1 px-4 w-full md:w-1/2 lg:my-4 lg:w-1/3'>
+                <div class='max-w-sm rounded overflow-hidden shadow-lg bg-white'>
+                  <img
+                    class='w-full'
+                    src={`${show.image.medium}`}
+                    alt={`Image of ${show.name}`}
+                  />
+                  <div class='px-6 py-4'>
+                    <div class='font-bold text-xl mb-2'>{show.name}</div>
+                    <p class='text-grey-darker text-base'>
+                      Premiered: {show.premiered}
+                    </p>
+                  </div>
+
+                  <>
+                    {/* <p>{(show.summary = show.summary.replace(regex, ''))}</p> */}
+                  </>
+                  <div class='px-6 py-4'>
+                    {show.genres.map(genre => (
+                      <span
+                        key={genre.id}
+                        class='inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2'
+                      >
+                        {genre}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </Link>
           ))}
-          {/* </ul> */}
         </div>
       </div>
     </Layout>

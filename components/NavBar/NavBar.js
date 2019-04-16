@@ -44,8 +44,11 @@ export default () => {
         </button>
       </div>
       <div
-        // class="toggleState ? 'hidden': 'block'"
-        class='w-full block flex-grow lg:flex lg:items-center lg:w-auto'
+        class={
+          toggleState
+            ? 'w-full block flex-grow'
+            : 'hidden lg:block lg:flex lg:items-center lg:w-auto'
+        }
       >
         <div class='text-md lg:flex-grow'>
           <Link href='/'>
