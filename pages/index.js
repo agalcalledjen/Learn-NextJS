@@ -17,7 +17,7 @@ const Home = ({ shows }) => {
               href={`/post?id=${show.id}`}
               key={show.id}
             >
-              <div class='my-1 px-4 w-full md:w-1/2 lg:my-4 lg:w-1/3'>
+              <div class='my-1 px-4 py-2 w-full md:w-1/2 lg:my-4 lg:w-1/3'>
                 <div class='max-w-sm rounded overflow-hidden shadow-lg bg-white'>
                   <img
                     class='w-full'
