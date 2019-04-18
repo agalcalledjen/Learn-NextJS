@@ -17,31 +17,29 @@ const Home = ({ shows }) => {
               href={`/post?id=${show.id}`}
               key={show.id}
             >
-              <div class='my-1 px-4 py-2 w-full md:w-1/2 lg:my-4 lg:w-1/3'>
-                <div class='max-w-sm rounded overflow-hidden shadow-lg bg-white'>
+              <div class='my-1 px-4 py-2 w-full md:w-1/2 lg:my-4 lg:w-1/4'>
+                <div class='max-w-sm rounded overflow-hidden shadow-lg bg-white group hover:bg-grey-darkest'>
                   <img
                     class='w-full'
                     src={`${show.image.medium}`}
                     alt={`Image of ${show.name}`}
                   />
-                  <div class='px-6 py-4'>
-                    <div class='font-bold text-xl mb-2'>{show.name}</div>
-                    <p class='text-grey-darker text-base'>
-                      Premiered: {show.premiered}
+                  <div class='px-6 py-4 pb-0 group-hover:text-white'>
+                    <p class='font-bold text-xl mb-2 group-hover:text-white'>
+                      {show.name}
                     </p>
+                    {/* <p class='text-grey-darker text-base'>
+                      Premiered: {show.premiered}
+                    </p> */}
                   </div>
 
-                  <>
-                    {/* <p>{(show.summary = show.summary.replace(regex, ''))}</p> */}
-                  </>
-                  <div class='px-6 py-4'>
+                  <div class='px-6 py-4 pt-0 flex flex-wrap'>
                     {show.genres.map(genre => (
-                      <span
-                        key={genre.id}
-                        class='inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2'
-                      >
-                        {genre}
-                      </span>
+                      <div class='p-1' key={genre.id}>
+                        <span class='inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker'>
+                          {genre}
+                        </span>
+                      </div>
                     ))}
                   </div>
                 </div>
