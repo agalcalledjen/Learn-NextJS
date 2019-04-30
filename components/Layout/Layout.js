@@ -8,7 +8,7 @@ import NavBar from '../NavBar';
 
 export default props => {
   return (
-    <div>
+    <div class='mt-32'>
       <NavBar />
       {props.children}
     </div>

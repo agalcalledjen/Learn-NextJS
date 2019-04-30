@@ -21,7 +21,7 @@ export default () => {
   };
 
   return (
-    <nav class='flex items-center justify-between flex-wrap bg-grey-darkest p-6'>
+    <nav class='flex items-center justify-between flex-wrap bg-grey-darkest p-6 shadow-lg fixed w-full pin-t'>
       <div class='flex items-center flex-no-shrink text-yellow mr-6'>
         <p class='font-mono text-2xl tracking-tight'>Batman TV Shows</p>
       </div>

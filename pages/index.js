@@ -4,8 +4,6 @@ import fetch from 'isomorphic-unfetch';
 import Layout from '../components/Layout';
 import '../styles/index.css';
 
-const regex = /(<([^>]+)>)/gi;
-
 const Home = ({ shows }) => {
   return (
     <Layout>
@@ -24,19 +22,16 @@ const Home = ({ shows }) => {
                     src={`${show.image.medium}`}
                     alt={`Image of ${show.name}`}
                   />
-                  <div class='px-6 py-4 pb-0 group-hover:text-white'>
-                    <p class='font-bold text-xl mb-2 group-hover:text-white'>
+                  <div class='px-6 py-4 pb-0'>
+                    <p class='font-bold text-xl mb-2 group-hover:text-yellow'>
                       {show.name}
                     </p>
-                    {/* <p class='text-grey-darker text-base'>
-                      Premiered: {show.premiered}
-                    </p> */}
                   </div>
 
                   <div class='px-6 py-4 pt-0 flex flex-wrap'>
                     {show.genres.map(genre => (
                       <div class='p-1' key={genre.id}>
-                        <span class='inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker'>
+                        <span class='inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker group-hover:bg-yellow-lighter'>
                           {genre}
                         </span>
                       </div>
