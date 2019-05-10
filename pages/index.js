@@ -52,7 +52,7 @@ Home.getInitialProps = async () => {
   const data = await res.json();
 
   console.log('DATA', data);
-  console.log(`DATA COUNT: ${data.length} `);
+  // console.log(`DATA COUNT: ${data.length} `);
 
   return {
     shows: data.map(entry => entry.show)
