@@ -4,11 +4,10 @@
   "description": "Learn NextJS",
   "main": "index.js",
   "scripts": {
-    "build": "next build",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next",
+    "build": "next build",
     "start": "next start",
-    "export": "next build && next export"
+    "now-build": "next build"
   },
   "keywords": [],
   "author": "Jennifer Lam",

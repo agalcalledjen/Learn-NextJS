@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "*.html", "use": "@now/static" },
-    { "src": "date.js", "use": "@now/node" },
+  "name": "learn-nextjs",
+  "builds": [{ "src": "next.config.js", "use": "@now/next" }],
+  "routes": [
     {
-      "src": "/pages/index.js",
-      "use": "@now/node"
+      "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+",
+      "headers": { "cache-control": "immutable,max-age=31536000" }
     }
   ]
 }
