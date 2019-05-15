@@ -1,5 +1,11 @@
 {
   "version": 2,
-  "alias": ["https://learn-nextjs.agalcalledjen.now.sh/"],
-  "builds": [{ "src": "package.json", "use": "@now/static-build" }]
+  "builds": [
+    { "src": "*.html", "use": "@now/static" },
+    { "src": "date.js", "use": "@now/node" },
+    {
+      "src": "/pages/index.js",
+      "use": "@now/node"
+    }
+  ]
 }
