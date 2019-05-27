@@ -12,7 +12,9 @@ const Post = ({ show }) => {
         <div class='max-w-md w-full lg:flex shadow-lg rounded overflow-hidden'>
           <div
             class='h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden'
-            style={`background-image: url(${show.image.medium})`}
+            style={{
+              backgroundImage: `url(${show.image.medium})`
+            }}
             alt={`Image of ${show.name}`}
             title={`${show.name}`}
           />
@@ -29,9 +31,9 @@ const Post = ({ show }) => {
             </div>
           </div>
         </div>
-        <h1>{show.name}</h1>
+        {/* <h1>{show.name}</h1> */}
 
-        <img src={show.image.medium} />
+        {/* <img src={show.image.medium} /> */}
       </div>
     </Layout>
   );

@@ -11,7 +11,7 @@ const Home = ({ shows }) => {
         <div class='flex flex-wrap -mx-1 lg:-mx-4'>
           {shows.map(show => (
             <Link
-              as={`/p/${show.id}`}
+              // as={`/p/${show.id}`}
               href={`/post?id=${show.id}`}
               key={show.id}
             >
