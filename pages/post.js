@@ -9,9 +9,9 @@ const Post = ({ show }) => {
   return (
     <Layout>
       <div class='container my-12 mx-auto px-4 md:px-12'>
-        <div class='max-w-md w-full lg:flex shadow-lg rounded overflow-hidden'>
+        <div class='w-full lg:flex shadow-lg rounded overflow-hidden'>
           <div
-            class='h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden'
+            class='h-64 lg:h-auto lg:w-1/2 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden'
             style={{
               backgroundImage: `url(${show.image.medium})`
             }}
@@ -31,9 +31,6 @@ const Post = ({ show }) => {
             </div>
           </div>
         </div>
-        {/* <h1>{show.name}</h1> */}
-
-        {/* <img src={show.image.medium} /> */}
       </div>
     </Layout>
   );
